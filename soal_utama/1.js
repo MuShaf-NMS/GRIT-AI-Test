@@ -1,35 +1,35 @@
 const myJson = [
   {
-    value: "Terserah saya 1",
+    value: "Test 1",
   },
   {
-    value: "Terserah saya 2",
+    value: "Test 2",
   },
   {
-    value: "Terserah saya 3",
+    value: "Test 3",
   },
   {
-    value: "Terserah saya 4",
+    value: "Test 4",
   },
   {
-    value: "Terserah saya 5",
+    value: "Test 5",
   },
   {
-    value: "Terserah saya 6",
+    value: "Test 6",
   },
   {
-    value: "Terserah saya 7",
+    value: "Test 7",
   },
   {
-    value: "Terserah saya 8",
+    value: "Test 8",
   },
   {
-    value: "Terserah saya 9",
+    value: "Test 9",
   },
   {
-    value: "Terserah saya 10",
+    value: "Test 10",
   },
   {
-    value: "Terserah saya 11",
+    value: "Test 11",
   },
 ];
