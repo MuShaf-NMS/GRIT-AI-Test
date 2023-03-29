@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>UserId</th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody id="bodyTable">
+      
+    </tbody>
+  </table>
+  <script>
+    async function loadData() {
+      const res = await fetch("http://jsonplaceholder.typicode.com/posts")
+      const r = await res.json()
+      const data = r.slice(0, 10)
+      const table = document.getElementById("bodyTable")
+      data.forEach((d, idx) => {
+        let row = table.insertRow(idx)
+        row.id = `data-${idx}`
+        let rowHtml = ""
+        Object.values(d).forEach((v) => {
+          rowHtml += `<td>${v}</td>`
+        })
+        rowHtml += `<td><button onclick="hapus(${idx})">hapus</button></td>`
+        row.innerHTML = rowHtml
+        // row.innerHTML = `
+        //   <td>${d.userId}</td>
+        //   <td>${d.id}</td>
+        //   <td>${d.body}</td>
+        //   <td><button onclick="hapus(${idx})">hapus</button></td>
+        // `
+      })
+    }
+    window.onload = loadData()
+  </script>
+  <script src="5.js"></script>
+</body>
+</html>
